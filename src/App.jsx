@@ -1,11 +1,14 @@
-import './App.css';
+import { useState } from 'react';
+// import './App.css';
+import RenderQuestion from './Components/RenderQuestion';
 
 function App() {
   return (
-    <>
+    <div>
       <RenderQuestion />
-      <RenderQuestion />
-    </>
+
+      <p>Hi</p>
+    </div>
   );
 }
 
