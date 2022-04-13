@@ -1,14 +1,14 @@
 import { useState } from 'react';
-// import './App.css';
-import RenderQuestion from './Components/RenderQuestion';
+import styled from 'styled-components';
+import { ContentWrap } from './App.styled';
+import QuestionCard from './Components/QuestionCard/QuestionCard';
 
 function App() {
   return (
-    <div>
-      <RenderQuestion />
-
-      <p>Hi</p>
-    </div>
+    <ContentWrap>
+      <QuestionCard />
+      <QuestionCard />
+    </ContentWrap>
   );
 }
 
