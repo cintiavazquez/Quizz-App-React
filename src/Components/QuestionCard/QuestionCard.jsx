@@ -1,26 +1,29 @@
 import styled from 'styled-components';
-import Tags from './Tags/Tags';
+// import Tags from './Tags/Tags';
 import { TagContainer } from './Tags/Tags.styled';
-import Button from './Button/Button';
-
+import { TagElement } from './Tags/TagElement.styled';
 import Bookmark from './Bookmark/Bookmark';
 import { CardContainer } from './QuestionCard.styled';
+import AnswerToggle from './AnswerToggle';
 
-export default function QuestionCard() {
+export default function QuestionCard({
+  question,
+  answer,
+  difficulty,
+  category,
+}) {
   return (
     <CardContainer>
       <h3>Question</h3>
       <Bookmark />
-      <div className="question__wrap js-questionwrap">
-        <p>Is this question 1?"</p>
-        <Button />
-        <p>Velit ducimus officia quos cum modi obcaecati dolor.</p>
-      </div>
+
+      <p>{question}</p>
+
+      <AnswerToggle text={answer}></AnswerToggle>
+
       <TagContainer>
-        <Tags name="tag1" />
-        <Tags name="tag2" />
-        <Tags name="tag3" />
-        <Tags name="tag4" />
+        <TagElement>{difficulty}</TagElement>
+        <TagElement>{category}</TagElement>
       </TagContainer>
     </CardContainer>
   );

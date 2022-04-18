@@ -1,16 +1,36 @@
+import { BookmarkEmpty } from './BookmarkEmpty';
+import { BookmarkFilled } from './BookmarkFilled';
+import styled from 'styled-components';
+import { useState } from 'react';
+
 export default function Bookmark() {
+  const [visibleEmpty, setVisibleEmpty] = useState(true);
+  console.log(visibleEmpty);
+
+  const [visibleFilled, setVisibleFilled] = useState(false);
+
   return (
-    <aside className="question__bookmark js-question__bookmark">
-      <img
-        className="bookmark js-bookmarkempty js-bookmark"
-        // src="./components/images/bookmark_border_white_24dp.svg"
-        // alt=""
-      />
-      <img
-        className="bookmark display-none js-bookmarkfilled js-bookmark"
-        // src="./components/images/bookmark_white_24dp.svg"
-        // alt=""
-      />
-    </aside>
+    <QuestionBookmark>
+      <BookmarkEmpty alt="Bookmark me" Visible="{visibleEmpty}">
+        onClick=
+        {() => {
+          console.log('pressed');
+          // setVisibleEmpty(!visibleEmpty);
+        }}
+      </BookmarkEmpty>
+
+      <BookmarkFilled alt="Unbookmark me">
+        onClick=
+        {() => {
+          setVisibleFilled(!visible);
+        }}
+      </BookmarkFilled>
+    </QuestionBookmark>
   );
 }
+
+const QuestionBookmark = styled.aside`
+  position: absolute;
+  top: -15px;
+  right: 5%;
+`;

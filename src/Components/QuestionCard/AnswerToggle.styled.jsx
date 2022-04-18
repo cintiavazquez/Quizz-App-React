@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const QuestionContentWrap = styled.ul`
+export const AnswerToggleContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

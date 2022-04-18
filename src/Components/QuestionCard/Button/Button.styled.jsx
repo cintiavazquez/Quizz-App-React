@@ -8,8 +8,7 @@ export const ButtonShowHide = styled.button`
   font-family: inherit;
   font-size: 2rem;
   font-weight: 700;
-  border: 4px solid white;
-  color: ;
+  border: 4px solid black;
   border-radius: 30px;
   background-color: transparent;
 `;
