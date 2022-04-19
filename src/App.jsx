@@ -9,6 +9,7 @@ import HomePage from './Components/HomePage';
 import BookmarkPage from './Components/BookmarkPage';
 import CreatePage from './Components/CreatePage';
 import ProfilePage from './Components/ProfilePage';
+import CreateForm from './Components/Form/Form';
 
 function App() {
   const [apiLog, setApiLog] = useState([]);
@@ -43,7 +44,9 @@ function App() {
         </QuestionContentWrap>
       </HomePage>
       <BookmarkPage />
-      <CreatePage />
+      <CreatePage>
+        <CreateForm />
+      </CreatePage>
       <ProfilePage />
 
       <footer>

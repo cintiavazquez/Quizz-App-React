@@ -5,26 +5,26 @@ import { useState } from 'react';
 
 export default function Bookmark() {
   const [visibleEmpty, setVisibleEmpty] = useState(true);
-  console.log(visibleEmpty);
-
   const [visibleFilled, setVisibleFilled] = useState(false);
 
   return (
     <QuestionBookmark>
-      <BookmarkEmpty alt="Bookmark me" Visible="{visibleEmpty}">
-        onClick=
-        {() => {
+      <BookmarkEmpty
+        alt="Bookmark me"
+        Visible="{visibleEmpty}"
+        onClick={() => {
           console.log('pressed');
           // setVisibleEmpty(!visibleEmpty);
         }}
-      </BookmarkEmpty>
+      ></BookmarkEmpty>
 
-      <BookmarkFilled alt="Unbookmark me">
-        onClick=
-        {() => {
-          setVisibleFilled(!visible);
+      <BookmarkFilled
+        alt="Unbookmark me"
+        onClick={() => {
+          console.log('pressed');
+          // setVisibleFilled(!visible);
         }}
-      </BookmarkFilled>
+      ></BookmarkFilled>
     </QuestionBookmark>
   );
 }
