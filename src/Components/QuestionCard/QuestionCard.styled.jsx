@@ -12,6 +12,7 @@ export const CardContainer = styled.div`
   box-shadow: 2px 5px 5px #b02d59;
   h3 {
     font-size: 2rem;
+    font-family: Fira Sans;
   }
   p {
     margin-bottom: 10px;

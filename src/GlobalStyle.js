@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,500;1,100;1,300;1,500&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   
   html {
     font-size: 62.5%;
+    
   }
   
   ul {

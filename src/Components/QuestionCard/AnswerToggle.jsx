@@ -1,25 +1,17 @@
-import { ButtonShowHide } from './Button/Button.styled';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AnswerToggleContainer } from './AnswerToggle.styled';
+import ButtonShowHide from './Button/ButtonShowHide';
 
 export default function AnswerToggle({ text }) {
-  const [showAnswer, setShowAnswer] = useState(true);
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {}, [showAnswer]);
-  useEffect(() => {}, [showAnswer]);
+  function toggleVisible() {
+    setVisible(!visible);
+  }
 
   return (
     <AnswerToggleContainer>
-      <ButtonShowHide
-        onClick={() => {
-          setShowAnswer(!showAnswer);
-
-          setVisible(!visible);
-        }}
-      >
-        {showAnswer ? 'Show answer' : 'Hide answer'}
-      </ButtonShowHide>
+      <ButtonShowHide onToggleVisible={toggleVisible} />
 
       <p>{visible ? text : ''}</p>
     </AnswerToggleContainer>
