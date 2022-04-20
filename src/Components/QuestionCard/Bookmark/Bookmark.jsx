@@ -13,8 +13,7 @@ export default function Bookmark() {
         alt="Bookmark me"
         Visible="{visibleEmpty}"
         onClick={() => {
-          console.log('pressed');
-          // setVisibleEmpty(!visibleEmpty);
+          setVisibleEmpty(!visibleEmpty);
         }}
       ></BookmarkEmpty>
 
