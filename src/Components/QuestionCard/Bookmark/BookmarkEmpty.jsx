@@ -3,10 +3,10 @@ export const BookmarkEmpty = ({ Visible, onClick }) => {
     <svg
       onClick={onClick}
       xmlns="http://www.w3.org/2000/svg"
-      height="44px"
+      height="54px"
       viewBox="0 0 24 24"
-      width="44px"
-      fill="white"
+      width="54px"
+      fill="#d67495"
       // {Visible ? '#fdfdfd' : 'none'}
     >
       <path d="M0 0h24v24H0V0z" fill="none" />

@@ -4,26 +4,20 @@ import styled from 'styled-components';
 import { useState } from 'react';
 
 export default function Bookmark() {
-  const [visibleEmpty, setVisibleEmpty] = useState(true);
+  const [bookmarked, setBookmarked] = useState(true);
   const [visibleFilled, setVisibleFilled] = useState(false);
 
   return (
-    <QuestionBookmark>
-      <BookmarkEmpty
-        alt="Bookmark me"
-        Visible="{visibleEmpty}"
-        onClick={() => {
-          setVisibleEmpty(!visibleEmpty);
-        }}
-      ></BookmarkEmpty>
-
-      <BookmarkFilled
-        alt="Unbookmark me"
-        onClick={() => {
-          console.log('pressed');
-          // setVisibleFilled(!visible);
-        }}
-      ></BookmarkFilled>
+    <QuestionBookmark
+      onClick={() => {
+        setBookmarked(!bookmarked);
+      }}
+    >
+      {bookmarked ? (
+        <BookmarkEmpty alt="Bookmark me" />
+      ) : (
+        <BookmarkFilled alt="Unbookmark me" />
+      )}
     </QuestionBookmark>
   );
 }

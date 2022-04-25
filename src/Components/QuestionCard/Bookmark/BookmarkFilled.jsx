@@ -2,9 +2,9 @@ export const BookmarkFilled = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="44px"
+      height="54px"
       viewBox="0 0 24 24"
-      width="44px"
+      width="54px"
       fill="#d67495"
     >
       <path d="M0 0h24v24H0V0z" fill="none" />
