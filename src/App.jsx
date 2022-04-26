@@ -4,10 +4,16 @@ import HomePage from './Components/HomePage';
 import BookmarkPage from './Components/BookmarkPage';
 import CreatePage from './Components/CreatePage';
 import ProfilePage from './Components/ProfilePage';
-
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
+  // const [bookmarked, setBookmarked] = useState(true);
+
+  // function onSetBookmarked() {
+  //   return !bookmarked;
+  // }
+
   return (
     <>
       <Routes>

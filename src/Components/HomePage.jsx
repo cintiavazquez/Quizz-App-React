@@ -4,9 +4,12 @@ import QuestionCard from './QuestionCard/QuestionCard';
 import { useState, useEffect } from 'react';
 import FetchApiData from './QuestionCard/FetchApiData';
 import Header from './Header/Header';
+import { nanoid } from 'nanoid';
 
 export default function HomePage() {
   const [apiLog, setApiLog] = useState([]);
+  //const [listOFCards, setListOfCards] = useState([]);
+
   const url = 'https://opentdb.com/api.php?amount=10&category=18';
 
   useEffect(() => {
@@ -16,6 +19,13 @@ export default function HomePage() {
       console.log(data.results);
     });
   }, []);
+
+  // function AddCard(NameNewInput) {
+  //   setListOfCards([
+  //     ...listOFCards,
+  //     { name: NameNewInput, id: nanoid(), isBookmarked: false }
+  //   ]);
+  // }
 
   return (
     <PagesWrap>
@@ -27,7 +37,7 @@ export default function HomePage() {
                 <h3>Home</h3>
               </Header>
               <QuestionCard
-                key={question}
+                key={nanoid()}
                 question={question}
                 answer={correct_answer}
                 difficulty={difficulty}

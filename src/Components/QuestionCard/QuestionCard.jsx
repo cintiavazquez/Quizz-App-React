@@ -5,6 +5,7 @@ import { TagElement } from './Tags/TagElement.styled';
 import Bookmark from './Bookmark/Bookmark';
 import { CardContainer } from './QuestionCard.styled';
 import AnswerToggle from './AnswerToggle';
+import { useState } from 'react';
 
 export default function QuestionCard({
   question,
@@ -12,10 +13,18 @@ export default function QuestionCard({
   difficulty,
   category,
 }) {
+  const [bookmarked, setBookmarked] = useState(false);
+
+  function toggleBookmarked() {
+    return setBookmarked(!bookmarked);
+  }
   return (
-    <CardContainer>
+    <CardContainer isBookmarked="{bookmarked}">
       <h3>Question</h3>
-      <Bookmark />
+      <Bookmark
+        onToggleBookmarked={toggleBookmarked}
+        Bookmarkstatus={bookmarked}
+      />
 
       <p>{question}</p>
 

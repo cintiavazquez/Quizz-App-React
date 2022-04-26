@@ -1,22 +1,21 @@
 import { BookmarkEmpty } from './BookmarkEmpty';
 import { BookmarkFilled } from './BookmarkFilled';
 import styled from 'styled-components';
-import { useState } from 'react';
+//import { useState } from 'react';
 
-export default function Bookmark() {
-  const [bookmarked, setBookmarked] = useState(true);
-  const [visibleFilled, setVisibleFilled] = useState(false);
+export default function Bookmark({ onToggleBookmarked, Bookmarkstatus }) {
+  // const [bookmarked, setBookmarked] = useState(true);
 
   return (
     <QuestionBookmark
       onClick={() => {
-        setBookmarked(!bookmarked);
+        onToggleBookmarked();
       }}
     >
-      {bookmarked ? (
-        <BookmarkEmpty alt="Bookmark me" />
-      ) : (
+      {Bookmarkstatus ? (
         <BookmarkFilled alt="Unbookmark me" />
+      ) : (
+        <BookmarkEmpty alt="Bookmark me" />
       )}
     </QuestionBookmark>
   );
