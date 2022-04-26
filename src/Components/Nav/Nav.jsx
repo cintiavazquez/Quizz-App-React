@@ -3,25 +3,23 @@ import { NavWrap } from './Nav.styled';
 import { IconBookmark } from './IconBookmark';
 import { IconCottage } from './IconCottage';
 import { IconPerson } from './IconPerson';
-import NavItem from './NavItem';
+import { NavLiItem } from './NavItem.styled';
 
 export default function Nav() {
   return (
-    <nav>
-      <NavWrap>
-        <NavItem>
-          <IconCottage />
-        </NavItem>
-        <NavItem>
-          <IconBookmark />
-        </NavItem>
-        <NavItem>
-          <IconAdd />
-        </NavItem>
-        <NavItem>
-          <IconPerson />
-        </NavItem>
-      </NavWrap>
-    </nav>
+    <NavWrap>
+      <NavLiItem to="/Home">
+        <IconCottage />
+      </NavLiItem>
+      <NavLiItem to="/Bookmark">
+        <IconBookmark />
+      </NavLiItem>
+      <NavLiItem to="/Create">
+        <IconAdd />
+      </NavLiItem>
+      <NavLiItem to="/Profile">
+        <IconPerson />
+      </NavLiItem>
+    </NavWrap>
   );
 }

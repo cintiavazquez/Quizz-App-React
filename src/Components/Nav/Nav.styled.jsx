@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavWrap = styled.ul`
+export const NavWrap = styled.nav`
   position: fixed;
   bottom: 0;
   right: 0;
